@@ -14,6 +14,7 @@ const app = express()
     origin: 'https://miapp'
 }))*/
 
+app.use(cors())
 app.use(express.json())
 app.use('/api/movimientos', require('./routes/movimientosRoutes'))
 app.use(errorHandler)
